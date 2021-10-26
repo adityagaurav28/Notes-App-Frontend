@@ -9,7 +9,7 @@ const NotePage = ({match, history}) => {
 
     useEffect(() => {
         getNote()
-    }, [noteId])
+    }, [noteId]) // eslint-disable-line react-hooks/exhaustive-deps
 
     let getNote = async () => {
         if (noteId === 'new') return
