@@ -13,7 +13,7 @@ const NotePage = ({match, history}) => {
 
     let getNote = async () => {
         if (noteId === 'new') return
-        let response = await fetch(`/api/notes/${noteId}`)
+        let response = await fetch(`http://127.0.0.1:8000/api/notes/${noteId}`)
         let data = await response.json()
         setNote(data)
     }
